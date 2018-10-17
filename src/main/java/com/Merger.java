@@ -1,4 +1,15 @@
 package com;
+/*Задание 2.
+*
+* Есть два отсортированных массива, необходимо объеденить в один отсортированный массив.
+   Пример:
+    a1 [1,3,6,8,9]
+	a2 [1,2,4,5]
+
+	r  [1,1,2,3,4,5,6,8,9]
+* */
+
+
 
 /**
  * The <code>Merger</code> class provides methods <tt>mergeTwoSortedArrays</tt>
@@ -20,6 +31,8 @@ public class Merger {
     public int[] mergeTwoSortedArrays(int[] firstArray, int[] secondArray) {
         if (firstArray == null && secondArray == null) {
             //Что делать? try catch?
+
+            //Warning:(34, 42) Condition 'secondArray != null' is always 'true' when reached
         } else if (firstArray == null && secondArray != null) {
             return secondArray;
         } else if (secondArray == null) {

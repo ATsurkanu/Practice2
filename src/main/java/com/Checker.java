@@ -1,4 +1,16 @@
 package com;
+/*
+* Задание 1.
+* Строка содержит скобки открывающиеся и закрывающиеся, она является нормализованной если
+   скобки открываются и закрываются в правильном порядке
+
+   Пример:
+   g{fsdfg}s - true
+   g{f(sd)fg}s - true
+   {g{fsdfg}s - false
+   {{[cc(c)ggg]}ssss} - true
+   {{[cc(c)ggg]}ssss}{ - false
+* */
 
 import java.util.Stack;
 
