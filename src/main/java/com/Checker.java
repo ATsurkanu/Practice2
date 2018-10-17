@@ -21,7 +21,7 @@ import java.util.Stack;
  * that removes all characters except parentheses.
  *
  * @author Anton Tsurkanu
- * */
+ */
 public class Checker {
 
     /**
@@ -29,23 +29,24 @@ public class Checker {
      *
      * @param stringForChecking string that should be checked.
      * @return <code>true</code> if <code>stringForChecking</code> parentheses are in normalized order;
-     *         <code>false</code> otherwise.
-     *
-     * */
+     * <code>false</code> otherwise.
+     */
     public boolean checkParenthesesOrder(String stringForChecking) {
         if (stringForChecking == null) {
             System.out.println("String is null.");
             return false;
         }
 
-        if (stringForChecking.isEmpty()){
+        if (stringForChecking.isEmpty()) {
             System.out.println("String is empty.");
             return false;
         }
 
-        String stringWithParenthesesOnly = removeAllCharactersExceptParentheses(stringForChecking);
+        String stringWithParenthesesOnly;
 
-        if (stringWithParenthesesOnly.isEmpty()){
+        stringWithParenthesesOnly = removeAllCharactersExceptParentheses(stringForChecking);
+
+        if (stringWithParenthesesOnly.isEmpty()) {
             System.out.println("String contains no parenthesis.");
             return false;
         }
@@ -81,8 +82,8 @@ public class Checker {
      *
      * @param stringWithAnyCharacters string from which only parentheses should be taken.
      * @return <code>String</code> with parentheses only or empty.
-     * */
-    private String removeAllCharactersExceptParentheses(String stringWithAnyCharacters) {
+     */
+    private String removeAllCharactersExceptParentheses(String stringWithAnyCharacters) throws NullPointerException {
         String stringWithParenthesesOnly;
 
         stringWithParenthesesOnly = stringWithAnyCharacters.replaceAll("[^(){}\\]\\[]+", "");

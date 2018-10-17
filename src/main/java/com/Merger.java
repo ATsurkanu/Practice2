@@ -30,9 +30,8 @@ public class Merger {
      */
     public int[] mergeTwoSortedArrays(int[] firstArray, int[] secondArray) {
         if (firstArray == null && secondArray == null) {
-            //Что делать? try catch?
-
-            //Warning:(34, 42) Condition 'secondArray != null' is always 'true' when reached
+            System.out.println("Both arrays are null. Empty array will be returned.");
+            return new int[0];
         } else if (firstArray == null && secondArray != null) {
             return secondArray;
         } else if (secondArray == null) {
